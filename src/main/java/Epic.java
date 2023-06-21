@@ -1,13 +1,21 @@
 public class Epic extends Task {
-    protected String title;
-    protected String [] subtask;
-    public Epic (int id, String title) {
+    private String[] subtasks;
+    public Epic(int id, String[] subtasks) {
         super(id); // вызов родительского конструктора
-        this.title = title; // заполнение своих полей
-
+        this.subtasks = subtasks;// заполнение своих полей
     }
 
-    public String getTitle() {
-        return title;
+    public String[] getSubtasks() {
+        return subtasks;
+    }
+
+    @Override
+    public boolean matches(String query) {
+for (String subtasks : subtasks )
+        if (subtasks.contains(query)) {
+            return true;
+        }
+        return false;
     }
 }
+
