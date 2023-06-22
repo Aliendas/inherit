@@ -14,7 +14,7 @@ public class TodosTest {
             "Во вторник после обеда");
 
     @BeforeEach
-    public void setup (){
+    public void setup() {
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
@@ -23,7 +23,7 @@ public class TodosTest {
     @Test
     public void shouldAddThreeTasksOfDifferentType() {
         Task[] actual = todos.findAll();
-        Task[] expected = { simpleTask, epic, meeting };
+        Task[] expected = {simpleTask, epic, meeting};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -31,9 +31,10 @@ public class TodosTest {
     @Test
     public void severalTasksFound() {
         Task[] actual = todos.search("во вторник");
-        Task[] expected = {simpleTask,meeting};
+        Task[] expected = {simpleTask, meeting};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void oneTasksFound() {
         Task[] actual = todos.search("Яйца");
@@ -47,7 +48,7 @@ public class TodosTest {
         Task[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
     }
-    }
+}
 
 
 
