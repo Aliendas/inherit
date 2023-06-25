@@ -6,9 +6,6 @@ public class Epic extends Task {
         this.subtasks = subtasks;// заполнение своих полей
     }
 
-    public String[] getSubtasks() {
-        return subtasks;
-    }
 
     @Override
     public boolean matches(String query) {

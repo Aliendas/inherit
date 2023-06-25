@@ -10,18 +10,6 @@ public class Meeting extends Task {
         this.project = project;// заполнение своих полей
     }
 
-    public String getTopic() {
-        return topic;
-    }
-
-    public String getStart() {
-        return start;
-    }
-
-    public String getProject() {
-        return project;
-    }
-
     @Override
     public boolean matches(String query) {
         if (topic.contains(query)) {

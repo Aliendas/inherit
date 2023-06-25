@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 
 public class TaskTest {
 
+
+
     @Test
 
     public void testSimpleTaskFound() {
@@ -46,6 +48,17 @@ public class TaskTest {
                 "Во вторник после обеда"
         );
         boolean actual = meeting.matches("после обеда");
+        Assertions.assertTrue(actual);
+    }
+    @Test
+    public void testMeetingTopicFound() {
+        Meeting meeting = new Meeting(
+                555,
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
+        );
+        boolean actual = meeting.matches("приложения");
         Assertions.assertTrue(actual);
     }
 

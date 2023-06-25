@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 public class TodosTest {
     Todos todos = new Todos();
@@ -30,7 +30,7 @@ public class TodosTest {
 
     @Test
     public void severalTasksFound() {
-        Task[] actual = todos.search("во вторник");
+        Task[] actual = todos.search("вторник");
         Task[] expected = {simpleTask, meeting};
         Assertions.assertArrayEquals(expected, actual);
     }
